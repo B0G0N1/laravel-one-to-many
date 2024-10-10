@@ -1,0 +1,30 @@
+@import '~bootstrap/scss/bootstrap';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+// Stile per l'header della pagina
+header {
+    height: 80px;
+
+    img {
+        height: 50px;
+        margin-left: 20px;
+    }
+}
+
+// Stile per il layout principale
+main {
+    display: flex;
+
+    // Stile per la sidebar
+    #sidebar {
+        height: calc(100vh - 80px); // Altezza dinamica rispetto all'header
+        width: 150px; // Larghezza fissa per la sidebar
+    }
+
+    // Stile per il contenuto principale
+    #content {
+        height: calc(100vh - 80px); // Altezza dinamica rispetto all'header
+        width: calc(100vw - 150px); // Larghezza dinamica, tolta la larghezza della sidebar
+        overflow-y: auto; // Scroll verticale per il contenuto
+    }
+}
